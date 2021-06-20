@@ -1,0 +1,17 @@
+.login-form {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  margin: 5rem;
+  width: 100%;
+  padding: 2rem;
+  background-color: #dae3f7;
+  box-shadow: 0 0 1em #718bc5;
+}
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  width: 100%;
+}
+

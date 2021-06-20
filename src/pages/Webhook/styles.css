@@ -1,0 +1,13 @@
+.register-center{
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .login-form {
+        margin: 0 !important;
+    }
+    
+    .img-wrapper {
+        display: none !important;
+    }
+}
