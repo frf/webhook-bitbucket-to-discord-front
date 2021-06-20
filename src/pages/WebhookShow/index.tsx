@@ -2,11 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './styles.css';
 import api from '../../services/api';
 import { useSnackbar } from "notistack";
-import { Table, Space } from "antd";
-
-import SVG from '../../assets/images/svg-7.svg';
-import { Link } from 'react-router-dom';
-
+import { Table } from "antd";
 
 const columns = [
   {
