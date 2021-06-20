@@ -1,62 +1,63 @@
-<h4 align="center">
-    Docfacil.me é uma plataforma para envio de documentos como identidade, cpf, carteira do plano de saúde etc.. <br>
-</h4>
-<p align="center">
-Esta plataforma funciona com um envio simples de uma imagem tirada do aplicativo, esta imagem é guardada de forma
- encryptada no nosso servidor onde somente o próprio dono tem acesso. <br>
- Esta idéia veio de uma dificuldade de eu vi de alguns idosos precisarem de forma digital alguns dos seus documentos
-  e não os encontravam, desta forma o aplicativo mobile vai concentrar todos os seus documentos.
-</p>
+# Webhook Bitbucket Discord
 
-<p align="center">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/frf/docfacil.me-front.svg">
-  <a href="https://github.com/frf/docfacil.me-front/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/frf/docfacil.me-front.svg">
-  </a>
+Integrator Bitbucket => Discord
 
-  <a href="https://github.com/frf/docfacil.me-front/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/frf/docfacil.me-front.svg">
-  </a>
+#### https://webhok.app2u.co
 
-  <img alt="GitHub" src="https://img.shields.io/github/license/frf/docfacil.me-front.svg">
-</p>
+## Register
+To use you need to register
 
-<p align="center">
-  <a href="#frf">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>
-</p>
+/auth/register
+```json
+{
+    "name": "User  Name",
+    "mobile_phone": "2199992222",
+    "email": "email@email.com.br",
+    "password": "123456"
+}
+```
 
-![App Screenshot](https://docfacil.me/images/screens/screen_apps.png)
-<p align="center">
-  <a href="https://docfacil.me" target="_blank">
-    <h3 align="center">Demo</h3>
-  </a>
-</p>
+After Register 
 
-## :smiley: About
+GET: /webhooks
 
-this project seeks to bring all developments in react, api, nodejs, nestjs to one place. I will demonstrate here several work that I do using these tools.
+```json
+{
+    "data": [
+        {
+            "key": "e58b09bac772c618dad10ad84a666614",
+            "webhook": "https://webhook.app2u.co/v1/webhook-message/e58b09xxxx",
+            "content": "Teste app2u",
+            "application": "bitbucket",
+            "my_webhook": "https://discord.com/api/webhooks/8453xxx9BymKxrE2M4XVQ9OisdcAbEfcRbsgVSfjIjcEsdEZI-13lmhKhr",
+            "created_at": "2021-05-21T21:29:07.000000Z"
+        },
+    ]
+}
+```
 
-I hope I can help all devs and beginners
-## :computer: Technologies
-This project was developed with the following technologies:
+POST: /webhooks
 
-- [ReactJS](https://reactjs.org/)
-- [TypeScriptLang](https://www.typescriptlang.org/docs/handbook/react.html)
-- [react-router-dom](https://github.com/ReactTraining/react-router)
-- [VS Code][vscode] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
+```json
+{
+    "application": "bitbucket",
+    "webhook": "https://discord.com/api/webhooks/854716932351721532/dasdsadsZ99BAFex6xJgEU",
+    "content": "FrontEnd"
+}
+```
 
-## :memo: License
+PATCH: /webhooks/<key>
 
-This project is under the MIT license. See the [LICENSE](https://github.com/frf/docfacil.me-front/blob/master/LICENSE) for more information.
+```json
+{
+    "webhook": "https://discord.com/api/webhooks/837790871847436288/ZYdF3af7fBa9fY-sRExxxgc"
+}
+```
 
----
+Configure bitbucket webhook
 
-Made with ♥ by Fabio Farias :wave: [Get in touch!](https://linkedin.com/in/fabiorochafarias/)
+After generate your webhook exemple (https://webhook.app2u.co/v1/webhook-message/e58b09xxxx)
 
-[ts]: https://www.typescriptlang.org
-[vscode]: https://code.visualstudio.com/
-[yarn]: https://yarnpkg.com/
-[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+Use in:
+![alt text](https://github.com/frf/images-apps/blob/main/discord-message/bitbucket.png?raw=true)
 
-# webhook-bitbucket-to-discord-front
