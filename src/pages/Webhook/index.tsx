@@ -4,8 +4,6 @@ import api from '../../services/api';
 import { useSnackbar } from "notistack";
 import { Table, Space } from "antd";
 
-// import FormLogin from '../../components/FormLogin';
-import SVG from '../../assets/images/svg-7.svg';
 import { Link } from 'react-router-dom';
 
 const columns = [
@@ -47,13 +45,8 @@ function Webhook() {
     <div className={'content'}>
       <div className={'container'}>
         <div className='row'>
-          <div className='col register-center'>
-            <Table dataSource={docs} columns={columns} />
-          </div>
           <div className='col'>
-            <div className={'img-wrapper'}>
-                  <img src={SVG} alt={'Login'} className={'hero-img'} />
-              </div>
+            <Table dataSource={docs} columns={columns} />
           </div>
         </div>
       </div>
